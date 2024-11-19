@@ -1,0 +1,70 @@
+{
+  "name": "@crimson206/talkative",
+  "version": "0.1.6-beta.3",
+  "description": "Storybook Template",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crimson206/talkative"
+  },
+  "author": "crimson206 <110409356+crimson206@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepublishOnly": "yarn build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "storybook:publish": "yarn build-storybook && touch ./storybook-static/.nojekyll && gh-pages -d ./storybook-static -t true",
+    "remove-blog": "git push origin --delete gh-pages"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@crimson206/bootstrap-theme-plugin": "^0.1.0",
+    "@crimson206/internal-link-handler": "^0.1.1",
+    "@crimson206/markdown-prerender": "^0.1.0",
+    "@crimson206/markdown-prism-code-plugin": "^0.1.0",
+    "@storybook/react": "^8.1.4",
+    "@storybook/react-vite": "^8.1.4",
+    "@types/node": "^22.5.5",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "^8.6.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "eslint-plugin-storybook": "^0.8.0",
+    "gh-pages": "^6.1.1",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-katex": "^7.0.0",
+    "rehype-prism": "^2.3.2",
+    "rehype-prism-plus": "^2.0.0",
+    "rehype-raw": "^7.0.0",
+    "rehype-slug": "^6.0.0",
+    "remark-emoji": "^5.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-math": "^6.0.0",
+    "remark-toc": "^9.0.0",
+    "storybook": "^8.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.7",
+    "vite-plugin-dts": "^4.3.0"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
+  }
+}
